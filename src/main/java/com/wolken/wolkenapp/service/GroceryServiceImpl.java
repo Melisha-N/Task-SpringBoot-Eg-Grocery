@@ -53,9 +53,7 @@ public class GroceryServiceImpl implements GroceryService{
 			System.out.println(e);
 		}
 		
-			return "Grocery Details Cannot Be Added!";
-		
-		
+			return "Grocery Details Cannot Be Added!";	
 	}
 
 	@Override
@@ -64,19 +62,7 @@ public class GroceryServiceImpl implements GroceryService{
 		System.out.println("Inside validateAnddelete() of GroceryServiceImpl");
 		System.out.println("Calling delByGroceryName()");
 		
-		return groceryDAO.delByGroceryName(groceryName);
-		
-//		try {
-//		if(groceryName.length() < 3) {
-//			System.out.println("Executing GroceryNameException()");
-//			throw new GroceryNameException();	
-//	}
-//			
-//	} catch (GroceryNameException | Exception e) {
-//		 System.out.println(e);
-//	}
-		
-			
+		return groceryDAO.delByGroceryName(groceryName);						
 	}
 
 	@Override
@@ -91,21 +77,6 @@ public class GroceryServiceImpl implements GroceryService{
 		System.out.println("Calling updateByQuantity()");
 		System.out.println("End of validateAndUpdateQuantity GroceryServiceImpl");
 
-		return groceryDAO.updateByQuantity(groceryQuantity , groceryName);
-//		try {
-//			if(groceryQuantity.isEmpty() || groceryQuantity.length() < 2) {
-//				throw new GroceryQuantityException();
-//			}
-//			if(groceryName.isEmpty() || groceryName.length() < 3 ) {
-//				throw new GroceryQuantityException();
-//			}
-//			else {
-//				
-//			}
-//		} catch (Exception e) {
-//		System.out.println(e);
-//		}
-//		return null;
+		return groceryDAO.updateByQuantity(groceryQuantity , groceryName);		
 	}
-
 }
